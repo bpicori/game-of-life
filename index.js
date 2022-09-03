@@ -9,7 +9,7 @@ let START = false;
 let generation = emptyMatrix();
 
 function emptyMatrix() {
-  var matrix = [];
+  const matrix = [];
   for (let i = 0; i < CELLS; i++) {
     matrix[i] = [];
     for (let j = 0; j < CELLS; j++) {
@@ -93,8 +93,8 @@ async function setup() {
 function draw(m) {
   const canvas = document.getElementById("canvas");
   background(0);
-  for (var i = 0; i < CELLS; i++) {
-    for (var j = 0; j < CELLS; j++) {
+  for (let i = 0; i < CELLS; i++) {
+    for (let j = 0; j < CELLS; j++) {
       const ctx = canvas.getContext("2d");
       if (m[i][j] === 1) {
         ctx.fillStyle = BLACK_COLOR;
@@ -148,4 +148,23 @@ setup();
 
 function startGame() {
   START = true;
+}
+
+function glider() {
+  START = false;
+  const matrix = [];
+  for (let i = 0; i < CELLS; i++) {
+    matrix[i] = [];
+    for (let j = 0; j < CELLS; j++) {
+      matrix[i][j] = 0;
+    }
+  }
+  let center = Math.floor(CELLS / 2);
+  matrix[center][center] = 1;
+  matrix[center + 1][center + 1] = 1;
+  matrix[center + 2][center + 1] = 1;
+  matrix[center + 2][center] = 1;
+  matrix[center + 2][center - 1] = 1;
+
+  generation = matrix;
 }
