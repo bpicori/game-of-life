@@ -32,12 +32,12 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     <button id="gospel">Gospel</button>
   </div>
   <div>
-    <label id="cellNr">Cell Size: 10</label>
-    <input type="range" id="cellRange" min="0" max="100" value="10" step="1">
+    <label id="cellNr">Cell Size: ${CELLS}</label>
+    <input type="range" id="cellRange" min="0" max="100" value="${CELLS}" step="1">
   </div>
   <div>
-    <label id="fpsLabel">FPS: 200</label>
-    <input type="range" id="fpsRange" min="100" max="2000" value="100" step="100">
+    <label id="fpsLabel">FPS: ${FPS}</label>
+    <input type="range" id="fpsRange" min="100" max="2000" value="${FPS}" step="100">
   </div>
 `;
 

@@ -6,4 +6,4 @@
 - Any dead cell with three live neighbors becomes a live cell.
 - All other live cells die in the next generation. Similarly, all other dead cells stay dead.
 
-![image](https://i.imgur.com/dgxwK6m.png)
+![image](https://i.imgur.com/K0qt9je.png)
