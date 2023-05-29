@@ -24,6 +24,14 @@ export function setFPS(newFPS: number): void {
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <h1>Conway Game of Life</h1>
+  <h3>Rules:</h3>
+  <ul>
+    <li>Any live cell with fewer than two live neighbors dies, as if by underpopulation.</li>
+    <li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+    <li>Any live cell with more than three live neighbors dies, as if by overpopulation.</li>
+    <li>Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
+  </ul>
+  <br>
   <div>
     <button id="startButton">Start</button>
     <button id="stopButton">Stop</button>
